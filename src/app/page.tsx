@@ -5,7 +5,7 @@ import Contact from "@/app/home/sections/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col gap-8 mg-auto h-svh bg-[#f89645]">
       <Hero />
       <About />
       <FAQs />
