@@ -2,7 +2,7 @@ import MenuButton from "./MenuButton";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full backdrop-blur py-6 px-4 mx-auto">
+    <header className="fixed top-0 w-full backdrop-blur p-6 mx-auto">
       <nav className="flex flex-row justify-between items-center">
         <a href="/#">
           <img src="/images/ohlive-logo-recortada.webp" alt="Ohlive logo" />
