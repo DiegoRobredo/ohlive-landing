@@ -8,17 +8,12 @@ export default function Hero() {
         Tus muebles pueden estar en casa del cliente antes de que los compre.
         IKEA ya lo hace. ¿Y tú?
       </h1>
-      <p>
+      <p className="mt-4">
         Haz que tus clientes vean tus muebles en su salón, su cocina o su
         dormitorio. Sin montajes. Sin Photoshop.
       </p>
-      <p>
-        Con nuestra app de realidad aumentada, conviertes su móvil en tu mejor
-        vendedor. Vas a vender más, vas a recibir menos devoluciones… y vas a
-        dejar de parecer la tienda de siempre. Porque si no te modernizas tú, lo
-        hará la competencia.
-      </p>
-      <article className="card-class">
+
+      <article className="card-class ml-auto mr-auto mt-4 mb-4">
         <img
           src="./images/ohlive-mobile.png"
           alt="Móvil mostrando la app Ohlive"
@@ -28,6 +23,12 @@ export default function Hero() {
           alt="Sofá sin fondo básico"
         />
       </article>
+      <p className="mt-2">
+        Con nuestra app de realidad aumentada, conviertes su móvil en tu mejor
+        vendedor. Vas a vender más, vas a recibir menos devoluciones… y vas a
+        dejar de parecer la tienda de siempre. Porque si no te modernizas tú, lo
+        hará la competencia.
+      </p>
     </SectionContainer>
   );
 }
