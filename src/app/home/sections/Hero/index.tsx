@@ -1,4 +1,5 @@
 import SectionContainer from "@/app/components/SectionContainer";
+import "./styles.css";
 
 export default function Hero() {
   return (
@@ -17,6 +18,16 @@ export default function Hero() {
         dejar de parecer la tienda de siempre. Porque si no te modernizas tú, lo
         hará la competencia.
       </p>
+      <article className="card-class">
+        <img
+          src="./images/ohlive-mobile.png"
+          alt="Móvil mostrando la app Ohlive"
+        />
+        <img
+          src="./images/sofa_sin_fondo_basico.png"
+          alt="Sofá sin fondo básico"
+        />
+      </article>
     </SectionContainer>
   );
 }
