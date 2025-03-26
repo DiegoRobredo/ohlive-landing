@@ -1,34 +1,31 @@
 import SectionContainer from "@/app/components/SectionContainer";
-import "./styles.css";
+import MobileCard from "./Card";
 
 export default function Hero() {
   return (
     <SectionContainer sectionId="hero" className="mt-16">
-      <h1 className="text-4xl font-bold color-secondary">
-        Tus muebles pueden estar en casa del cliente antes de que los compre.
-        IKEA ya lo hace. ¿Y tú?
+      <h1 className="text-4xl font-bold text-secondary">
+        Tus muebles pueden estar{" "}
+        <span className="font-extrabold">
+          en casa del cliente antes de que los compre
+        </span>
+        . IKEA ya lo hace. ¿Y tú?
       </h1>
-      <p className="mt-4">
+      <p className="mt-4 text-secondary">
         Haz que tus clientes vean tus muebles en su salón, su cocina o su
-        dormitorio. Sin montajes. Sin Photoshop.
+        dormitorio. <span className="font-bold">Sin montajes</span>.{" "}
+        <span className="font-bold">Sin Photoshop</span>.
       </p>
-
-      <article className="card-class ml-auto mr-auto mt-4 mb-4">
-        <img
-          src="./images/ohlive-mobile.png"
-          alt="Móvil mostrando la app Ohlive"
-        />
-        <img
-          src="./images/sofa_sin_fondo_basico.png"
-          alt="Sofá sin fondo básico"
-        />
-      </article>
-      <p className="mt-2">
+      <MobileCard />
+      {/* <p className="mt-2">
         Con nuestra app de realidad aumentada, conviertes su móvil en tu mejor
         vendedor. Vas a vender más, vas a recibir menos devoluciones… y vas a
         dejar de parecer la tienda de siempre. Porque si no te modernizas tú, lo
         hará la competencia.
-      </p>
+      </p> */}
+      <button className="p-2 bg-secondary text-primary rounded-lg w-full text-xl">
+        Pruébalo gratis
+      </button>
     </SectionContainer>
   );
 }

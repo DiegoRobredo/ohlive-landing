@@ -37,8 +37,11 @@
   bottom: 0;
   height: -webkit-fill-available;
   width: -webkit-fill-available;
-  /* background: rgba(0, 0, 0, 0.3); */
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   opacity: 0;
   margin-inline: 20px;
   margin-top: 10px;
