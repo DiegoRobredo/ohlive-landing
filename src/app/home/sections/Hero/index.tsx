@@ -3,13 +3,12 @@ import MobileCard from "./Card";
 
 export default function Hero() {
   return (
-    <SectionContainer sectionId="hero" className="mt-16">
+    <SectionContainer sectionId="hero">
       <h1 className="text-4xl font-bold text-secondary">
         Tus muebles pueden estar{" "}
         <span className="font-extrabold">
           en casa del cliente antes de que los compre
-        </span>
-        . IKEA ya lo hace. ¿Y tú?
+        </span>. IKEA ya lo hace. ¿Y tú?
       </h1>
       <p className="mt-4 text-secondary">
         Haz que tus clientes vean tus muebles en su salón, su cocina o su

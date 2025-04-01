@@ -12,7 +12,7 @@ export default function SectionContainer({
   className = ""
 }: Props) {
   return (
-    <section id={sectionId} className={`max-w-6xl p-6 ${className}`}>
+    <section id={sectionId} className={`max-w-6xl p-6 mt-16 ${className}`}>
       {children}
     </section>
   );

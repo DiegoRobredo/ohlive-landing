@@ -1,18 +1,24 @@
 import SectionContainer from "@/app/components/SectionContainer";
+import Path from "./Path";
 
 export default function About() {
   return (
     <SectionContainer sectionId="about">
-      <h3 className="text-xl text-secondary">
-        👀 Vende más mostrando cómo quedarían en casa
-      </h3>
+      <div className="absolute">
+        <Path fill="#ffffff" />
+      </div>
+      <h2 className="text-3xl text-secondary">
+        Vende más mostrando cómo quedarían en casa
+      </h2>
       <p className="text-secondary">
         Realidad aumentada sencilla, rápida y con efecto “wow”
       </p>
-      <h3 className="text-xl text-secondary">
-        ❌ Tus fotos no venden tanto como podrían
+      <h3 className="text-2xl text-secondary mt-6">
+        Tus fotos no venden tanto como podrían
       </h3>
-      <p className="text-secondary">Tus muebles se ven bien en las fotos.</p>
+      <p className="text-secondary mt-2">
+        Tus muebles se ven bien en las fotos.
+      </p>
       <p className="text-secondary">Pero cuando el cliente los recibe…</p>
       <p className="text-secondary">“No me imaginaba que quedara así.”</p>
       <p className="text-secondary">
@@ -22,7 +28,7 @@ export default function About() {
       <p className="text-secondary">
         “¿Cómo puede ser que con tanto esfuerzo… acabe devolviéndolo?”
       </p>
-      <h3 className="text-xl text-secondary">
+      <h3 className="text-2xl text-secondary mt-6">
         🚀 La app que pone tus muebles en el salón del cliente
       </h3>
 
@@ -40,7 +46,7 @@ export default function About() {
         jugar en otra liga.
       </p>
       <p className="text-secondary">La de los grandes.</p>
-      <h3 className="text-xl text-secondary">
+      <h3 className="text-2xl text-secondary mt-6">
         💬 Ya lo están usando, y funciona así de bien:
       </h3>
       <p className="text-secondary">
@@ -50,7 +56,7 @@ export default function About() {
       <p className="text-secondary">
         — Marta, dueña de una tienda de muebles en Valencia
       </p>
-      <h3 className="text-xl text-secondary">
+      <h3 className="text-2xl text-secondary mt-6">
         ❗ “Yo no tengo la necesidad de esto...”
       </h3>
       <p className="text-secondary">No todavía.</p>

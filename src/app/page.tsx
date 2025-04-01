@@ -1,5 +1,5 @@
 import Hero from "@/app/home/sections/Hero";
-import About from "@/app/home/sections/About";
+import About from "@/app/home/sections/StoryTelling";
 import FAQs from "@/app/home/sections/FAQs";
 import Contact from "@/app/home/sections/Contact";
 
