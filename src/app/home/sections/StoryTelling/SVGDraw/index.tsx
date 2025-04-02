@@ -22,11 +22,20 @@ export default function SVGDraw() {
 
       const path = document.querySelector(".svg-draw path") as SVGPathElement;
       const length = path.getTotalLength();
+      const visibleLength = length * percentageInCenter;
 
       if (percentageInCenter >= 0 && percentageInCenter <= 1) {
-        path.style.strokeDasharray = (length * percentageInCenter).toString();
+        path.style.strokeDasharray = length.toString();
+        path.style.strokeDashoffset = (length - visibleLength).toString();
+      }
+
+      if (percentageInCenter < 0) {
+        path.style.strokeDasharray = length.toString();
+        path.style.strokeDashoffset = length.toString();
+      }
+
+      if (percentageInCenter > 1) {
         path.style.strokeDashoffset = "0";
-        // path.style.strokeDashoffset = (length * percentageInCenter).toString();
       }
     };
 

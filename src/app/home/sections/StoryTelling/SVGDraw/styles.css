@@ -1,8 +1,8 @@
-.svg-draw path {
+.vg-draw path {
   stroke-dasharray: 500; /* Longitud total del trazo */
   stroke-dashoffset: 500; /* Oculta completamente el trazo */
   transition: stroke-dashoffset 2s ease-out;
 }
-.svg-draw.path-visible path {
+.vg-draw.path-visible path {
   stroke-dashoffset: 0; /* Lo dibuja */
 }
