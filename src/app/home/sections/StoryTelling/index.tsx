@@ -1,11 +1,11 @@
 import SectionContainer from "@/app/components/SectionContainer";
-import Path from "./Path";
+import SVGDraw from "./SVGDraw";
 
 export default function About() {
   return (
     <SectionContainer sectionId="about">
-      <div className="absolute">
-        <Path fill="#ffffff" />
+      <div className="absolute svg-container">
+        <SVGDraw />
       </div>
       <h2 className="text-3xl text-secondary">
         Vende más mostrando cómo quedarían en casa
