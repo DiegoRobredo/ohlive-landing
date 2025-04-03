@@ -41,7 +41,11 @@ export default function StoryTelling() {
         {articles.map(({ id, title, content }) => (
           <article key={id} className="story-content">
             <h3 className="text-2xl text-secondary">{title}</h3>
-            <p className="text-secondary mt-2">{content}</p>
+            {content.map((text) => (
+              <p key={text} className="text-md text-secondary mt-1">
+                {text}
+              </p>
+            ))}
           </article>
         ))}
       </div>
