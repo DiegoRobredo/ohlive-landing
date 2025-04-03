@@ -1,0 +1,10 @@
+.story-container .story-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.story-container .story-content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

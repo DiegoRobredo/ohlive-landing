@@ -14,13 +14,16 @@ export default function SVGDraw() {
 
       const rect = svgRef.current.getBoundingClientRect();
       const elementCenter = rect.top + rect.height / 2;
-      const viewportCenter = window.innerHeight / 2;
+      const viewportCenter = (window.innerHeight * 2) / 3;
 
       const distanceFromCenter = elementCenter - viewportCenter;
       const percentageInCenter =
         (rect.height / 2 - distanceFromCenter) / rect.height;
 
-      const path = document.querySelector(".svg-draw path") as SVGPathElement;
+      const path = $<SVGPathElement>(".svg-draw path");
+
+      if (!path) return;
+
       const length = path.getTotalLength();
       const visibleLength = length * percentageInCenter;
 
@@ -43,5 +46,12 @@ export default function SVGDraw() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <Path fill="#ffffff" ref={svgRef} className="svg-draw" />;
+  return (
+    <Path
+      ref={svgRef}
+      className="svg-draw absolute top-0"
+      width="100%"
+      height="100%"
+    />
+  );
 }

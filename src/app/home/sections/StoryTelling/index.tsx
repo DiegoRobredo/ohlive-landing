@@ -1,72 +1,50 @@
-import SectionContainer from "@/app/components/SectionContainer";
-import SVGDraw from "./SVGDraw";
+"use client";
 
-export default function About() {
+import SectionContainer from "@/app/components/SectionContainer";
+import { $$ } from "@/app/lib/dom-selector";
+import SVGDraw from "./SVGDraw";
+import { useEffect } from "react";
+import { articles } from "@/app/consts/articles";
+import "./styles.css";
+
+export default function StoryTelling() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("story-content-visible");
+          } else {
+            entry.target.classList.remove("story-content-visible");
+          }
+        });
+      },
+      { rootMargin: "-30% 0px" }
+    );
+
+    const $articles = $$(".story-container .story-content");
+
+    if (!$articles) return;
+
+    $articles.forEach((article) => {
+      observer.observe(article);
+    });
+  }, []);
+
   return (
     <SectionContainer sectionId="about">
-      <div className="absolute svg-container">
-        <SVGDraw />
-      </div>
       <h2 className="text-3xl text-secondary">
-        Vende más mostrando cómo quedarían en casa
+        Vende más mostrando cómo quedarían tus muebles en casa
       </h2>
-      <p className="text-secondary">
-        Realidad aumentada sencilla, rápida y con efecto “wow”
-      </p>
-      <h3 className="text-2xl text-secondary mt-6">
-        Tus fotos no venden tanto como podrían
-      </h3>
-      <p className="text-secondary mt-2">
-        Tus muebles se ven bien en las fotos.
-      </p>
-      <p className="text-secondary">Pero cuando el cliente los recibe…</p>
-      <p className="text-secondary">“No me imaginaba que quedara así.”</p>
-      <p className="text-secondary">
-        Y ahí vienen las dudas. Las devoluciones. Las pérdidas.
-      </p>
-      <p className="text-secondary">Y tú pensando:</p>
-      <p className="text-secondary">
-        “¿Cómo puede ser que con tanto esfuerzo… acabe devolviéndolo?”
-      </p>
-      <h3 className="text-2xl text-secondary mt-6">
-        🚀 La app que pone tus muebles en el salón del cliente
-      </h3>
-
-      <p className="text-secondary">
-        Nuestra aplicación de realidad aumentada convierte cualquier móvil en un
-        probador de muebles.
-      </p>
-      <p className="text-secondary">El cliente apunta con la cámara…</p>
-      <p className="text-secondary">
-        Y ve tus productos en su casa. En tiempo real.
-      </p>
-      <p className="text-secondary">Sin imaginar. Sin errores.</p>
-      <p className="text-secondary">
-        Así suben las ventas, bajan las devoluciones, y tu tienda se pone a
-        jugar en otra liga.
-      </p>
-      <p className="text-secondary">La de los grandes.</p>
-      <h3 className="text-2xl text-secondary mt-6">
-        💬 Ya lo están usando, y funciona así de bien:
-      </h3>
-      <p className="text-secondary">
-        “Cuando un cliente ve el sofá en su salón, ya no pregunta si le va a
-        gustar. Solo pregunta si llega rápido.”
-      </p>
-      <p className="text-secondary">
-        — Marta, dueña de una tienda de muebles en Valencia
-      </p>
-      <h3 className="text-2xl text-secondary mt-6">
-        ❗ “Yo no tengo la necesidad de esto...”
-      </h3>
-      <p className="text-secondary">No todavía.</p>
-      <p className="text-secondary">
-        Pero tus competidores ya lo están probando.
-      </p>
-      <p className="text-secondary">
-        Y cuando un cliente compare tu tienda con la suya…
-      </p>
-      <p className="text-secondary">¿A quién crees que va a comprar?</p>
+      <div className="flex flex-col items-center justify-center gap-y-10 mt-6 story-container">
+        {/* <SVGDraw /> */}
+        {articles.map(({ id, title, content }) => (
+          <article key={id} className="story-content">
+            <h3 className="text-2xl text-secondary">{title}</h3>
+            <p className="text-secondary mt-2">{content}</p>
+          </article>
+        ))}
+      </div>
     </SectionContainer>
   );
 }
