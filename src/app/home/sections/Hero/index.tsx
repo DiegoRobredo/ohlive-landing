@@ -1,5 +1,6 @@
 import SectionContainer from "@/app/components/SectionContainer";
 import MobileCard from "./Card";
+import ARViewer from "@/app/components/ARViewer";
 
 export default function Hero() {
   return (
@@ -8,7 +9,8 @@ export default function Hero() {
         Tus muebles pueden estar{" "}
         <span className="font-extrabold">
           en casa del cliente antes de que los compre
-        </span>. IKEA ya lo hace. ¿Y tú?
+        </span>
+        . IKEA ya lo hace. ¿Y tú?
       </h1>
       <p className="mt-4 text-secondary">
         Haz que tus clientes vean tus muebles en su salón, su cocina o su

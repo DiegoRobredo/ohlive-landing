@@ -1,6 +1,6 @@
 .card-class {
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
   aspect-ratio: 9 / 16;
   width: 200px;
 }
@@ -14,15 +14,15 @@
   height: 100%;
 }
 
-.card-class img:last-child {
+.card-class .canvas-container {
   position: absolute;
   width: 100%;
+  height: 100%;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  transform: translateY(-50%);
-  transition: 0.3s ease;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
   z-index: 3;
 }
@@ -42,7 +42,7 @@
   margin-inline: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out;
   z-index: 2;
   border-radius: 20px;
 }
@@ -56,7 +56,7 @@
     opacity: 1;
   }
 
-  .card-class:hover img:last-child {
+  .card-class:hover .canvas-container {
     opacity: 1;
   }
 
@@ -70,7 +70,7 @@
     opacity: 1;
   }
 
-  .card-motion-class img:last-child {
+  .card-motion-class .canvas-container {
     opacity: 1;
   }
 

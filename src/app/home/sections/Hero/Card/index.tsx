@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { $ } from "@/app/lib/dom-selector";
+import ARViewer from "@/app/components/ARViewer";
 import "./styles.css";
 
 export default function MobileCard() {
@@ -28,10 +29,11 @@ export default function MobileCard() {
         src="./images/ohlive-mobile.png"
         alt="Móvil mostrando la app Ohlive"
       />
-      <img
+      <ARViewer/>
+      {/* <img
         src="./images/sofa_sin_fondo_basico.png"
         alt="Sofá sin fondo básico"
-      />
+      /> */}
     </article>
   );
 }
