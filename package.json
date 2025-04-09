@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run compress:all && npm run build:next",
+    "build:next": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compress:all": "node scripts/compress-models.js",
+    "build:full": "npm run compress:all && npm run build"
   },
   "dependencies": {
     "@react-three/cannon": "^6.6.0",
