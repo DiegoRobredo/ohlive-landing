@@ -6,7 +6,7 @@ import { $ } from "@/app/lib/dom-selector";
 import "./styles.css";
 
 export default function SVGDraw() {
-  const svgRef = useRef<SVGGeometryElement | null>(null);
+  const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
