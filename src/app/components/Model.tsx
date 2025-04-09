@@ -1,15 +1,16 @@
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { useRef, useState } from "react";
+import { Object3D } from "three";
 
 export default function Model({ src }: { src: string }) {
   const gltf = useGLTF(src);
   const ref = useRef(null);
   const [isMouseDown, setIsMouseDown] = useState(false);
 
-  useFrame((state, delta) => {
+  useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.y -= isMouseDown ? 0 : 0.01; // rotación en eje Y
+      (ref.current as Object3D).rotation.y -= isMouseDown ? 0 : 0.01; // rotación en eje Y
     }
   });
 

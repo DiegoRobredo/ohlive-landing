@@ -2,7 +2,6 @@
 
 import SectionContainer from "@/app/components/SectionContainer";
 import { $$ } from "@/app/lib/dom-selector";
-import SVGDraw from "./SVGDraw";
 import { useEffect } from "react";
 import { articles } from "@/app/consts/articles";
 import "./styles.css";

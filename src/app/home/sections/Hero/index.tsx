@@ -1,6 +1,5 @@
 import SectionContainer from "@/app/components/SectionContainer";
 import MobileCard from "./Card";
-import ARViewer from "@/app/components/ARViewer";
 
 export default function Hero() {
   return (
