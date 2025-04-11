@@ -20,7 +20,7 @@ export default function ARViewer() {
         <OrbitControls enableZoom={false} />
         <Model
           src={
-            window.location.href.indexOf("localhost") > -1
+            document.location.href.indexOf("localhost") > -1
               ? "/models/sofa.glb"
               : "/models/sofa-draco.glb"
           }
