@@ -18,7 +18,13 @@ export default function ARViewer() {
         {/* <ContextWatcher onContextLost={handleContextLost} /> */}
         <ambientLight intensity={1} />
         <OrbitControls enableZoom={false} />
-        <Model src={"/models/sofa-draco.glb"} />
+        <Model
+          src={
+            window.location.href.indexOf("localhost") > -1
+              ? "/models/sofa.glb"
+              : "/models/sofa-draco.glb"
+          }
+        />
       </Canvas>
     </div>
   );
