@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { ARButton } from "three/examples/jsm/webxr/ARButton";
+import { ARButton } from "three/examples/jsm/webxr/ARButton.js";
 
 export default function ARScene() {
   const containerRef = useRef<HTMLDivElement>(null);
