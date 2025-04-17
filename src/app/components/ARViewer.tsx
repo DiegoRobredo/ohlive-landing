@@ -29,11 +29,7 @@ export default function ARViewer() {
         <TransformControls />
         {/* <House /> */}
         <Model
-          src={
-            document.location.href.indexOf("localhost") > -1
-              ? "/models/sofa.glb"
-              : "/models/sofa-draco.glb"
-          }
+          src={"/models/sofa.glb"}
         />
       </Canvas>
     </div>

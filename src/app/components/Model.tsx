@@ -8,6 +8,10 @@ import { Object3D } from "three";
 useGLTF.preload("/models/sofa-draco.glb");
 
 export default function Model({ src }: { src: string }) {
+  if (!document.location.href.includes("localhost")) {
+    src = src.replace(".glb", "-draco.glb");
+  }
+  
   const gltf = useGLTF(src);
   const ref = useRef(null);
 
