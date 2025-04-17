@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import * as THREE from "three";
 
 type RoofProps = {
@@ -7,7 +7,11 @@ type RoofProps = {
   height: number;
 };
 
-export default function Roof({ width, depth, height }: RoofProps): THREE.BufferGeometry {
+export default function Roof({
+  width,
+  depth,
+  height
+}: RoofProps): THREE.BufferGeometry {
   const geometry = useMemo(() => {
     const shape = new THREE.BufferGeometry();
 

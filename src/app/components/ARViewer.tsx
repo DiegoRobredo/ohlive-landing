@@ -2,7 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, TransformControls } from "@react-three/drei";
-import House from "./models/House";
+// import House from "./models/House";
 // import { ContextWatcher } from "./ContextWatcher";
 // import { useState } from "react";
 import Model from "./Model";

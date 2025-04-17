@@ -1,5 +1,6 @@
 import SectionContainer from "@/app/components/SectionContainer";
 import MobileCard from "./Card";
+import ARButton from "@/app/components/ARButton";
 
 export default function Hero() {
   return (
@@ -23,9 +24,10 @@ export default function Hero() {
         dejar de parecer la tienda de siempre. Porque si no te modernizas tú, lo
         hará la competencia.
       </p> */}
-      <button className="p-2 bg-secondary text-primary rounded-lg w-full text-xl">
+      {/* <button className="p-2 bg-secondary text-primary rounded-lg w-full text-xl">
         Pruébalo gratis
-      </button>
+      </button> */}
+      <ARButton />
     </SectionContainer>
   );
 }

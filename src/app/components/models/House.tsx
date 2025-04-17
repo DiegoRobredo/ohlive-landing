@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { CSG } from "three-csg-ts";
 import * as THREE from "three";
-import Roof from "./Roof";
+// import Roof from "./Roof";
 
 export default function House() {
   const mesh = useMemo(() => {
@@ -9,7 +9,7 @@ export default function House() {
     const width = 2;
     const depth = 2;
     const height = 2;
-    const roofHeight = 1.5;
+    // const roofHeight = 1.5;
 
     // Cubo base
     const base = new THREE.Mesh(
